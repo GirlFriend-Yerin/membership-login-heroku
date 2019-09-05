@@ -1,0 +1,149 @@
+#page_title{
+    color: #00BB00;
+    text-align: center;
+    font-size: 50px;
+    font: bold;
+}
+
+.login{
+    font-family: 'Jua', sans-serif;
+}
+
+.Join{
+    font-family: 'Yeon Sung', cursive;
+}
+
+.item_hideen{
+    display: none;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    margin: auto;
+}
+
+.modal_header{
+    display: flex;
+    margin: 0 auto;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Jua', sans-serif;
+}
+
+#modal_bound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    padding: 15px;
+    margin: auto;
+    background-color: #3abf4c;
+    border-radius: 20px
+}
+
+/* Modal Content/Box */
+#modal_content_div {
+    margin: 5% 0; /* 5% from the top and centered */
+    padding: 20px;
+    border: none;
+    width: auto; /* Could be more or less, depending on screen size */ 
+    border-radius: 20px                         
+}
+
+#modal_content{
+    font-size: 20px;
+    font-family: 'Yeon Sung', cursive;
+    color: whitesmoke
+}
+
+#modal_button_div{
+    widows: 50px;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 20px;
+}
+
+#modal_button_div > input{
+    width: 90px;
+    border-radius: 20px;
+    background: white;
+    font-weight: bold;
+    font-family: 'Jua', sans-serif;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body {
+    background:whitesmoke;
+}
+
+input{
+    border:none;
+    outline: none;
+    min-width: 1px;
+    width: 490px;
+    height: 30px;
+    margin: 5px;
+}
+
+section{
+    min-height: calc(100% - 80px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background: white;
+    height:80px;
+    font-family: 'Jua', sans-serif;
+    font-size: 40px;
+    padding: 10px;
+    color: greenyellow
+}
+
+
+::-webkit-scrollbar{
+    height: 12px;
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    border: 1px solid #00BB00;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: yellowgreen;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #88ba1c;  
+}
+

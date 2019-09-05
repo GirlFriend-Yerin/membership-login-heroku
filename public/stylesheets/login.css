@@ -1,0 +1,27 @@
+#login_button{
+    width: 100%;
+}
+
+#login_p{
+    margin-top:10px;
+    font-size: 12px;
+    font-family: 'Jua', sans-serif;
+}
+
+.login{
+    font-family: 'Jua', sans-serif;
+}
+
+#login_id, #login_pwd{
+    width: 300px;
+}
+
+#login_result{
+    width: auto;
+    margin : 0 0 10px 0;
+}
+
+#login_button{
+    width: 300px;
+    margin-left: 5px;
+}

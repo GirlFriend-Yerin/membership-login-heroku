@@ -1,0 +1,194 @@
+.textInput {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 13pt;
+    margin: auto;
+    max-width: 500px;
+}
+
+.buttonInput{
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    white-space: nowrap;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.join_btn{
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background: #00BB00;
+    font-size: 15pt;
+    color: white;
+    border: none;
+    width: 50%;
+    height: 60px;
+}
+
+.birth{
+    display: flex;
+    text-align: left center;
+}
+
+.join_vali{
+    color: green;
+    font-size: 11px;
+}
+
+.join_vali_error{
+    color: red;
+    font-size: 11px;
+}
+
+.input_span{
+    border: 1.5px solid gray;
+    background: white;
+    height: auto;
+    min-height: 40px;
+    align-content: center;
+    text-align: center
+}
+
+.token_div{
+    display: flex;
+    height: 30px; 
+    border:none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: #00CC00;
+    font-display: auto;
+    font-weight: bold;
+}
+
+.token_content{
+    height: 20px;
+    font-size: 13px;
+    background: #00CC00;
+    color: white
+}
+
+.token_close{
+    height: 20px;
+    width: 10px;
+    font-size:10px;
+    background: #00CC00;
+    text-align: center;
+    color: white
+}
+
+.input_focus{
+    border: 1.5px solid #00BB00;
+}
+
+#join_birth{
+    display:flex;
+    justify-content: space-between
+}
+
+#join_birth_span{
+    width: 40%;
+}
+
+#join_birth_year{
+    width: 90%;
+}
+
+#join_birth_month_span{
+    width: 30%;
+}
+#join_birth_month{
+    width: 90%;
+}
+
+#join_birth_day_span{
+    width: 30%;
+}
+#join_birth_day{
+    width: 90%;
+}
+
+#join_gender{
+    width: 95%;
+}
+
+#join_interest_span{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.join_interest_div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#join_interest{
+    min-width: 100px;
+    width: auto;
+}
+
+#join_agreement_div{
+    display: flex;
+    text-decoration: underline
+}
+
+#join_agreement_content_div{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    border: 1px solid black;
+    background: #00BB0099;
+}
+
+#join_agreement_close_div{
+    padding: 3px 10px 0px 5px; 
+}
+
+#join_agreement_head_div{
+    padding: 10px;
+}
+
+#join_agreement_head{
+    margin: 5px 0;
+    color: white;
+} 
+
+#join_agreement_content{
+    height:200px; 
+    border: 1px solid gray; 
+    padding: 5px; 
+    overflow: auto;
+    background: white;
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+#join_agreement_accept{
+    width: auto;
+    height: auto;
+    padding: 10px 30px;
+    color: white;
+    background: #00BB00;
+    display: block;
+    margin: 10px auto;
+}
+
+#join_agreement_close{
+    float:right;
+    color: white
+}
+
+#join_agree{
+    width: 20px;
+    height: 20px;
+}
+
+select{
+    height: 40px;
+    border: none;
+    outline: none;
+}
