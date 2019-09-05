@@ -1,5 +1,5 @@
 const dataJson = require('../model/data.json')
-const fs = require('../server/fileSystem')
+const fs = require('../routes/fileSystem')
 
 class DataSource{
 
