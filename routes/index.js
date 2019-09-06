@@ -62,8 +62,10 @@ app.get('/signIn', (req, res, next) => {
     const loginResult = login(params)
 
     if (loginResult){
-        res.cookie('BHC', generator.uuid(), {'maxAge': 30000, expires: generator.timestamp() + 300000, httpOnly: false})
-        console.log(res.cookie())
+        const uid = generator.uudi()
+        const exirTime = generator.timestamp() + 300000
+        console.log(`uuid\nexirTime`)
+        res.cookie('BHC', uid, {'maxAge': 30000, expires: exirTime, httpOnly: false})
     }
        
 
