@@ -65,11 +65,9 @@ app.get('/signIn', (req, res, next) => {
         const uid = generator.uuid()
         const exirTime = generator.timestamp() + 300000
         console.log(`uuid : ${uid}\nexirTime : ${exirTime}`)
-        res.header('Set-Cookie', `BHC=${uid}; maxAge=30000; Path=${req.host}/`)
-        //res.cookie('BHC', uid, {'maxAge': 30000, expires: exirTime, httpOnly: false})
-    }
+        res.cookie('BHC', uid, {'maxAge': 30000, domain: req.host ,expires: exirTime, httpOnly: false})
+  0  }
        
-
     const result = { "result": loginResult }
     res.send(`${JSON.stringify(result)}`)
 })
