@@ -9,7 +9,7 @@ app.use(bodyParser())
 app.use(cookieParser())
 
 app.get('/', (req, res, next) => {
-    next('Not Found')
+    res.send('Cannot Found?')
 })
 
 app.get('/join', (req, res, next) => {
