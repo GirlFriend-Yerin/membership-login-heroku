@@ -8,6 +8,16 @@ const CORS = require('cors')
 
 app.use(bodyParser())
 app.use(cookieParser())
+app.use(CORS())
+
+
+app.all('/*', (req, res, next)=> {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    res.header('User-Agent', 'Mozilla/5.0')
+    res.header('Content-Type', 'application/json')
+    next();
+})
 
 app.get('/', (req, res, next) => {
     res.send('Cannot Found?')
@@ -34,9 +44,6 @@ app.post('/join', (req, res, next) => {
 app.get('/duplicate', (req, res, next) => {
     console.log(`${req.host} is comming duplicate to GET`)
 
-    res.set('User-Agent', 'Mozilla/5.0')
-    res.set('Content-Type', 'application/json')
-
     const result = { "result": isDuplicate(req.query) }
     res.send(`${JSON.stringify(result)}`)
 })
@@ -44,18 +51,12 @@ app.get('/duplicate', (req, res, next) => {
 app.post('/duplicate', (req, res, next) => {
     console.log(`${req.host} is comming duplicate to POST`)
 
-    res.set('User-Agent', 'Mozilla/5.0')
-    res.set('Content-Type', 'application/json')
-
     const result = { "result": isDuplicate(req.query) }
     res.send(`${JSON.stringify(result)}`)
 })
 
 app.get('/signIn', (req, res, next) => {
     console.log(`${req.host} is comming signIn to GET`)
-
-    res.set('User-Agent', 'Mozilla/5.0')
-    res.set('Content-Type', 'application/json')
 
     const params = req.query
     const loginResult = login(params)
