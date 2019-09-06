@@ -25,6 +25,15 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
+app.all('/*', (req, res, next)=> {
+  res.set("Access-Control-Allow-Origin", "http://localhost:3000");
+  res.set("Access-Control-Allow-Headers", "X-Requested-With");
+  res.set("Access-Control-Allow-Credential", true)
+  res.set('User-Agent', 'Mozilla/5.0')
+  res.set('Content-Type', 'application/json')
+  next();
+})
+
 
 server.listen(port, function() {
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env)

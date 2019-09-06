@@ -10,15 +10,6 @@ app.use(bodyParser())
 app.use(cookieParser())
 app.use(CORS())
 
-app.all('/*', (req, res, next)=> {
-    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.set("Access-Control-Allow-Headers", "X-Requested-With");
-    res.set("Access-Control-Allow-Credential", true)
-    res.set('User-Agent', 'Mozilla/5.0')
-    res.set('Content-Type', 'application/json')
-    next();
-  })
-
 app.get('/', (req, res, next) => {
     res.send('Cannot Found?')
 })
