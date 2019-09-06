@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser')
 const dataSource = require('../model/datasource')
 const generator = require('../util/generator')
+const CORS = require('cors')
 
 app.use(bodyParser())
 app.use(cookieParser())
