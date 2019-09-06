@@ -61,8 +61,11 @@ app.get('/signIn', (req, res, next) => {
     const params = req.query
     const loginResult = login(params)
 
-    if (loginResult)
+    if (loginResult){
         res.cookie('BHC', generator.uuid(), {'maxAge': 30000, expires: generator.timestamp() + 300000, httpOnly: false})
+        console.log(res.cookie())
+    }
+       
 
     const result = { "result": loginResult }
     res.send(`${JSON.stringify(result)}`)
