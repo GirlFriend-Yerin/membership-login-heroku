@@ -10,14 +10,14 @@ app.use(bodyParser())
 app.use(cookieParser())
 app.use(CORS())
 
-
 app.all('/*', (req, res, next)=> {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    res.header('User-Agent', 'Mozilla/5.0')
-    res.header('Content-Type', 'application/json')
+    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.set("Access-Control-Allow-Headers", "X-Requested-With");
+    res.set("Access-Control-Allow-Credential", true)
+    res.set('User-Agent', 'Mozilla/5.0')
+    res.set('Content-Type', 'application/json')
     next();
-})
+  })
 
 app.get('/', (req, res, next) => {
     res.send('Cannot Found?')
@@ -56,7 +56,7 @@ app.post('/duplicate', (req, res, next) => {
 })
 
 app.get('/signIn', (req, res, next) => {
-    console.log(`${req.host} is comming signIn to GET`)
+    console.log(`${req.originalUrl} is comming signIn to GET`)
 
     const params = req.query
     const loginResult = login(params)
@@ -65,7 +65,7 @@ app.get('/signIn', (req, res, next) => {
         const uid = generator.uuid()
         const exirTime = generator.timestamp() + 300000
         console.log(`uuid : ${uid}\nexirTime : ${exirTime}`)
-        res.cookie('BHC', uid, {'maxAge': 30000, domain: req.host ,expires: exirTime, httpOnly: false})
+        res.cookie('BHC', uid, {'maxAge': 30000, domain: req.host ,expires: exirTime, httpOnly: true})
   0  }
        
     const result = { "result": loginResult }
